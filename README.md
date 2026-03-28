@@ -1,38 +1,41 @@
-🍣 Cloudflare Worker 部署 Sushi 注册脚本指南 🍣
-一键部署 · 自动注册 · 订阅链接生成
+# 🍣 Cloudflare Worker Sushi 自动注册脚本
 
-📌 简介：
+**一键部署 · 自动注册 · 订阅链接生成**
 
-本指南将引导您在 Cloudflare Worker 上部署一个自动注册 Sushi 账号并生成订阅链接的脚本。此方法高效便捷，可用于获取新的订阅内容。
+一个高效便捷的 Cloudflare Worker 脚本，可自动注册 Sushi 账号并生成订阅链接，适合搭配 Clash、V2Ray、Sing-box 等客户端使用。
 
-⚡️ 部署步骤：
+---
 
-1. 登录 Cloudflare：
-• 访问 Cloudflare 官网 并登录您的账号 。
+## 📌 简介
 
-2. 创建 Worker：
-• 在左侧导航栏点击 Workers & Pages。
-• 点击 Create application 按钮。
-• 点击 Create Worker 按钮。
-• 为您的 Worker 起一个名字（例如 sushi-reg），然后点击 Deploy。
+本项目通过 Cloudflare Worker 实现 Sushi 账号的自动化注册，每次访问 Worker URL 时会自动创建一个新账号，并返回可用的订阅内容。
 
-3. 编辑代码：
-• 部署成功后，点击 Edit Code 按钮进入在线编辑器。
-• 将编辑器中原有的代码全部删除。
-• 将您提供的 cf_worker_sushi.js 文件中的内容全部复制并粘贴进去。
+无需服务器、无需数据库，部署简单，免费使用。
 
-4. 保存并部署：
-• 点击右上角的 Save and deploy 按钮。
-• 确认部署。
+---
 
-🚀 如何使用：
+## ⚡️ 部署步骤
 
-部署完成后，您会获得一个以 .workers.dev 结尾的 URL。
+### 1. 登录 Cloudflare
+访问 [Cloudflare Dashboard](https://dash.cloudflare.com/) 并登录你的账号。
 
-使用场景示例：
-• 直接注册并获取订阅：
-https://sushi-reg.yourname.workers.dev/
+### 2. 创建 Worker
+- 在左侧导航栏点击 **Workers & Pages**
+- 点击 **Create application**
+- 选择 **Create Worker**
+- 输入 Worker 名称（推荐：`sushi-reg`、`sushi-auto` 等），然后点击 **Deploy**
 
-提示：您可以直接在浏览器访问该 URL ，或者将其作为订阅链接填入 Clash、V2Ray 等客户端中，每次请求都会自动触发一次新账号的注册并返回订阅内容。
+### 3. 编辑代码
+- 部署完成后，点击 **Edit Code** 进入代码编辑器
+- 删除编辑器中所有默认代码
+- 将 `cf_worker_sushi.js` 文件中的全部代码复制并粘贴到编辑器中
 
-#CloudflareWorker #Sushi注册 #订阅链接 #自动化脚本 #V2Ray #Clash
+### 4. 保存并部署
+- 点击右上角的 **Save and deploy** 按钮
+- 等待部署成功
+
+---
+
+## 🚀 使用方法
+
+部署完成后，你会获得一个 `.workers.dev` 结尾的 URL，例如：
